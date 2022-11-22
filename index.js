@@ -1,10 +1,11 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { message } = require('statuses');
+const template = require('./utils/generateMarkdown');
+const path = require('path');
 
 // User prompts for README creation
 inquirer
-    .createPromptModule(
+    .prompt(
         [
             {
                 type: 'input',
@@ -14,36 +15,36 @@ inquirer
             },
             {
                 type: 'input',
-                name: 'description',
+                name: 'descriptionBuild',
                 message: 'What was your motivation to build this particular project?', 
                 validate: (value)=>{ if(value){return true} else {return 'Input required'}},
             },
             {
                 type: 'input',
-                name: 'description',
+                name: 'descriptionWhy',
                 message: 'Why did you build this project?',  
                 validate: (value)=>{ if(value){return true} else {return 'Input required'}},
             },
             {
                 type: 'input',
-                name: 'description',
+                name: 'descriptionProblem',
                 message: 'What problem does it solve?',  
                 validate: (value)=>{ if(value){return true} else {return 'Input required'}},
             },
             {
                 type: 'input',
-                name: 'description',
+                name: 'descriptionLearn',
                 message: 'What did you learn?',  
                 validate: (value)=>{ if(value){return true} else {return 'Input required'}},
             },
             {
                 type: 'input',
-                name: 'description',
+                name: 'descriptionStandOut',
                 message: 'What makes your project stand out?',  
             },
             {
                 type: 'input',
-                name: 'description',
+                name: 'descriptionChallenges',
                 message: 'What challenges did you face?', 
             },
             {
@@ -91,44 +92,11 @@ inquirer
         ]
     )
 // README template
-.then(({
-    title,
-    description,
-    installation,
-    usage,
-    credits,
-    license,
-    features,
-    futureDev,
-    contributions
-})=>{
-const template = 
-`# ${title}
-## Description
-${description}
-## Installation
-${installation}
-## Usage
-${usage}
-## Credits
-${credits}
-## License
-${license}
-## Features
-${features}
-## Future Development
-${futureDev}
-## Contributions
-${contributions}`
-
-// Function that creates README via fs
-createNewFile(title,template);
-}
-);
+.then(answers=>createNewFile('README.md',template(answers)))
 
 // Function to create a file for the README
 function createNewFile(fileName,data) {
-    fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`,data,(err)=>{
+    fs.writeFile(path.resolve(__dirname,'dist',fileName),data,(err)=>{
         if(err){
             console.log(err)
         }
