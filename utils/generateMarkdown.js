@@ -3,6 +3,9 @@
 function renderLicenseBadge(license) {
 if(license==='The MIT License'){
   return '[![MIT](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)'
+} 
+else if (license==='The GPL License') {
+  return '[![GPL](https://img.shields.io/badge/license-GPL-green)](https://opensource.org/licenses/GPL)'
 }
 
 }
@@ -32,7 +35,7 @@ ${renderLicenseBadge(data.license)}
 
 
 ### Description
-${data.descriptionBuild}
+${data.description}
 `;
 }
 

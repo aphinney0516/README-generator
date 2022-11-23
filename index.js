@@ -15,37 +15,9 @@ inquirer
             },
             {
                 type: 'input',
-                name: 'descriptionBuild',
-                message: 'What was your motivation to build this particular project?', 
+                name: 'description',
+                message: 'Describe your project (what, why, problems solved, lessons learned, and challenges faced)', 
                 validate: (value)=>{ if(value){return true} else {return 'Input required'}},
-            },
-            {
-                type: 'input',
-                name: 'descriptionWhy',
-                message: 'Why did you build this project?',  
-                validate: (value)=>{ if(value){return true} else {return 'Input required'}},
-            },
-            {
-                type: 'input',
-                name: 'descriptionProblem',
-                message: 'What problem does it solve?',  
-                validate: (value)=>{ if(value){return true} else {return 'Input required'}},
-            },
-            {
-                type: 'input',
-                name: 'descriptionLearn',
-                message: 'What did you learn?',  
-                validate: (value)=>{ if(value){return true} else {return 'Input required'}},
-            },
-            {
-                type: 'input',
-                name: 'descriptionStandOut',
-                message: 'What makes your project stand out?',  
-            },
-            {
-                type: 'input',
-                name: 'descriptionChallenges',
-                message: 'What challenges did you face?', 
             },
             {
                 type: 'input',
