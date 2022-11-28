@@ -15,6 +15,18 @@ inquirer
             },
             {
                 type: 'input',
+                name: 'repository',
+                message: 'What is the exact name of your github repository?',
+                validate: (value)=>{ if(value){return true} else {return 'Input required'}},
+            },
+            {
+                type: 'input',
+                name: 'githubUserName',
+                message: 'What is your github username?',
+                validate: (value)=>{ if(value){return true} else {return 'Input required'}},
+            },
+            {
+                type: 'input',
                 name: 'description',
                 message: 'Describe your project (what, why, problems solved, lessons learned, and challenges faced)', 
                 validate: (value)=>{ if(value){return true} else {return 'Input required'}},
