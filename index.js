@@ -87,5 +87,3 @@ function createNewFile(fileName,data) {
         console.log('Your README has been generated.');
     })
 }
-
-// Add license links and badge section???
