@@ -26,12 +26,11 @@ function renderLicenseLink(license) {
 
 // function that returns the license section of README or empty string
 function renderLicenseSection(license) {
-  if (license === 'N/A') {
-    return ' '
+  if (license !== 'N/A') {
+    return `### License
+Licensed under ${license}`
   } else {
-    return `
-    ### License
-    Licensed under ${license}`
+    return ''
   }
 }
 
@@ -72,11 +71,10 @@ ${data.futureDev}
 ### Contributions
 ${data.contributions}
 
-### Questions
-
-Please use the issues section of https://github.com/${data.githubUserName}/${data.repository}/issues
-
 ${renderLicenseSection(data.license)}
+
+### Questions
+Please use the issues section of https://github.com/${data.githubUserName}/${data.repository}/issues
 `;
 }
 module.exports = generateMarkdown;

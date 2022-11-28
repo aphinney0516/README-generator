@@ -72,6 +72,7 @@ inquirer
                 type: 'input',
                 name: 'contributions',
                 message: 'What are the instructions for contributions?',
+                validate: (value)=>{ if(value){return true} else {return 'Input required'}},
             },
         ]
     )
