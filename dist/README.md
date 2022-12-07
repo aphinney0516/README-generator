@@ -1,4 +1,4 @@
-# README Generator
+# Team Profile Generator
  
 
 ## Table of Contents
@@ -13,26 +13,25 @@
  
 
 ### Description
-The goal of this project was to create a CLI README Generator to use in conjunction with the creation of future projects. It solves the problem of having to reference multiple user guides on the creation of a README and saves time on the creation of the README through auto-formatting. Working through this project helped me realize the potential of node and CLI for the creation of similar template style projects.
+This CLI application is intended to be used to produce a visually appealing web document database of employees filling the positions of manager, engineer, and intern. It will not only provide easy access to employee information, but it will also provide quick links to employee emails and engineer gitHub accounts. This is the second project where I've learned that I need to do some extra study on how to generate html using both javascript and user input.
 
 ### Installation
-Utilizing this project will require an operating system that has a CLI interface with node installed and software similar to Visual Studio Code. The code can then be retrieved from the GitHub repository linked under the "Questions" section.
+You must have node installed on your computer along with the appropriate files within a program like VS code.
 
 ### Usage
-Please follow the link below to view the video on how to use this project.
-https://youtu.be/mfL__2cd8DA
+Please see the video below.
 
 ### Credits
-Once I completed the initial draft of the required coding my tutor Corey Yates helped me fine tune it. You can find more of her work at https://github.com/cqyates.
+I worked closely with my tutor, Corey Yates, on this project; however, the one section we ran out of time to work on together was the section on how to generate the html.
 
 ### Features
-The license badge at the top of the page links to the licensing information (if your project includes a license). The table of contents links to each respective part of the README. All GitHub user and repository links are active.
+This project contains a command line form and html generation based on the command line form. At least it's supposed to have that last part.
 
 ### Future Development
-As this is merely the beginning of my web development career, as I advance I'm sure my READMEs will get more and more complicated, so I will continue to update the code of this README Generator in order to facilitate more extensive READMEs.
+I plan on fixing this project so that it will actually generate the html based on both the user input and the style sheet.
 
 ### Contributions
-IF you are interested in contributing to this project, please use the issues section of the project's GitHub repository linked under the "Questions" section.
+Please use the issues section of the linked GitHub repo.
 
 ### Questions
-Please use the issues section of https://github.com/aphinney0516/README-generator/issues
+Please use the issues section of https://github.com/aphinney0516/team-profile-generator/issues
